@@ -10,7 +10,6 @@ class DashboardRoute extends Component {
   componentDidMount() {
     this.context.clearError();
     languageApiService
-
       .getWords()
       .then((res) => {
         console.log(res.language, 'new test');
@@ -36,18 +35,17 @@ class DashboardRoute extends Component {
   }
 
   render() {
-    console.log(this.context.language, 'context test');
+    console.log(this.context, 'context test');
 
     return (
       <div>
-        <h2>Let's practice {this.context.language.name}!</h2>
-        <h3>Words to practice</h3>
-        <ul>{this.renderWords()}</ul>
-        <p>{`Total correct answers: ${this.context.language.totalScore}`}</p>
-
+        <h2>{`Let's practice ${this.context.language.name}!`}</h2>
         <Link to='/learn'>
           <button>Start practice</button>
         </Link>
+        <h3>Words to practice</h3>
+        <ul>{this.renderWords()}</ul>
+        <p>{`Total correct answers: ${this.context.language.totalScore}`}</p>
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 const LanguageContext = React.createContext({
-  language: [],
+  language: {},
   words: [],
   nextWord: [],
   isCorrect: false,
@@ -16,7 +16,7 @@ export default LanguageContext;
 
 export class LanguageProvider extends Component {
   state = {
-    language: [],
+    language: {},
     words: [],
     nextWord: [],
     isCorrect: false,

@@ -13,11 +13,10 @@ class NextWordPage extends Component {
       handleSubmitAnswer,
       handleChange,
     } = this.props;
-
     return (
       <div>
         <h2>Translate the word:</h2>
-        <p>{nextWord}</p>
+        <span>{nextWord}</span>
         <form onSubmit={handleSubmitAnswer}>
           <label htmlFor='answer-input'>
             What's the translation for this word?

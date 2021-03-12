@@ -100,7 +100,6 @@ class LearningRoute extends Component {
   render() {
     return (
       <div>
-        <h3>Translate the word:</h3>
         <div>{this.renderNextWord()}</div>
       </div>
     );
