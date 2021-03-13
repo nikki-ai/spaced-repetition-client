@@ -12,7 +12,6 @@ class DashboardRoute extends Component {
     languageApiService
       .getWords()
       .then((res) => {
-        console.log(res.language, 'new test');
         this.context.setLanguage(res.language);
         this.context.setWords(res.words);
       })
@@ -35,8 +34,6 @@ class DashboardRoute extends Component {
   }
 
   render() {
-    console.log(this.context, 'context test');
-
     return (
       <section>
         <h2>{`Let's practice ${this.context.language.name}!`}</h2>
