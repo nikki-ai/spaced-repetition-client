@@ -1,0 +1,52 @@
+body {
+  background-color: #bdb2ff;
+}
+header {
+  background-color: gray;
+  text-align: center;
+}
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+a {
+  text-decoration: none;
+  color: #bdb2ff;
+}
+nav {
+  background-color: gray;
+  font-size: large;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+li {
+    list-style: none;
+}
+.words-to-practice {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-justify: newspaper;
+}
+button {
+    background-color: rgba(128, 128, 128, 0.288);
+    border-radius: 15%;
+    border-color: gray;
+    padding: 10px;
+}
+input {
+    background-color: rgba(128, 128, 128, 0.288);
+}
+.theWord {
+    background-color: rgba(128, 128, 128, 0.288);
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    border-style: solid;
+    border-color: gray;
+    width: 200px;
+    height: 100px;
+}

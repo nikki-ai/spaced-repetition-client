@@ -38,15 +38,18 @@ class DashboardRoute extends Component {
     console.log(this.context, 'context test');
 
     return (
-      <div>
+      <section>
         <h2>{`Let's practice ${this.context.language.name}!`}</h2>
         <Link to='/learn'>
-          <button>Start practice</button>
+          <button>Start practicing</button>
         </Link>
-        <h3>Words to practice</h3>
-        <ul>{this.renderWords()}</ul>
-        <p>{`Total correct answers: ${this.context.language.totalScore}`}</p>
-      </div>
+        <div className='words-to-practice'>
+          <h3>Words to practice</h3>
+          <ul>{this.renderWords()}</ul>
+          <p>{`Total correct answers: ${this.context.language.total_score}`}</p>
+        </div>
+        
+      </section>
     );
   }
 }

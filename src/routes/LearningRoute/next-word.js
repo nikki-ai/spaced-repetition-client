@@ -16,23 +16,23 @@ class NextWordPage extends Component {
     return (
       <div>
         <h2>Translate the word:</h2>
-        <span>{nextWord}</span>
+        <h3 className='theWord'>{nextWord}</h3>
         <form onSubmit={handleSubmitAnswer}>
-          <label htmlFor='answer-input'>
-            What's the translation for this word?
+          <label htmlFor='learn-guess-input'>
+            What's the translation for this word?{' '}
           </label>
           <input
             name='answer'
-            id='answer-input'
+            id='learn-guess-input'
             type='text'
             placeholder='Translation'
             value={userResponse}
             onChange={handleChange}
             required
-          />
+          /><br/>
           <button type='submit'>Submit your answer</button>
         </form>
-        <p>Your total score is: {totalScore} </p>
+        <div className='DisplayScore'><p>Your total score is: {totalScore}</p></div>
         <p>You have answered this word correctly {wordCorrectCount} times.</p>
         <p>
           You have answered this word incorrectly {wordIncorrectCount} times.
