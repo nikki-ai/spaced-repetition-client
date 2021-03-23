@@ -25,10 +25,19 @@ class RegistrationForm extends Component {
     })
       .then((user) => {
         name.value = '';
-        username.value = '';
-        password.value = '';
-        // this.context.processLogin(res.authToken);
-        this.props.onRegistrationSuccess();
+        AuthApiService.postLogin({
+          username: username.value,
+          password: password.value,
+        })
+          .then((res) => {
+            username.value = '';
+            password.value = '';
+            this.context.processLogin(res.authToken);
+            this.props.onRegistrationSuccess();
+          })
+          .catch((res) => {
+            this.setState({ error: res.error });
+          });
       })
       .catch((res) => {
         this.setState({ error: res.error });
@@ -62,7 +71,12 @@ class RegistrationForm extends Component {
             Choose a username
             <Required />
           </Label>
-          <Input id='registration-username-input' name='username' placeholder='Username' required />
+          <Input
+            id='registration-username-input'
+            name='username'
+            placeholder='Username'
+            required
+          />
         </div>
         <div>
           <Label htmlFor='registration-password-input'>
