@@ -9,6 +9,9 @@ Spaced Repetition is an app that allows users to learn the Spanish language usin
 - Client Repo:
   - https://github.com/nikki-ai/spaced-repetition-client
 
+## Screenshots
+![image](https://user-images.githubusercontent.com/72418388/114339883-e5fe4280-9b1b-11eb-8bfe-58d2c0fd8197.png)
+
 ## Application Features
 - User can register using their name, a username, and a password. The password must be 8 characters long, must contain one upper case, lower case, number, and special character.
 - As a returning user, the user may login using their username and password.
